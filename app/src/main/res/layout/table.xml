@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true">
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:scrollbars="vertical">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Employee ID"
+        android:id="@+id/emIDLabel"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textCapCharacters"
+        android:ems="10"
+        android:id="@+id/emID"
+        android:layout_alignBaseline="@+id/emIDLabel"
+        android:layout_alignBottom="@+id/emIDLabel"
+        android:layout_toRightOf="@+id/emIDLabel"
+        android:layout_toEndOf="@+id/emIDLabel"
+        android:maxLines="1" />
+
+    <TextView
+        android:text="Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/nameLabel"
+        android:layout_alignBaseline="@+id/name"
+        android:layout_alignBottom="@+id/name"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textCapWords"
+        android:ems="10"
+        android:id="@+id/name"
+        android:layout_below="@+id/emID"
+        android:layout_alignLeft="@+id/emID"
+        android:layout_alignStart="@+id/emID" />
+
+    <TextView
+        android:text="Gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/genLabel"
+        android:layout_marginTop="24dp"
+        android:layout_below="@+id/name"
+        android:layout_alignLeft="@+id/emailLabel"
+        android:layout_alignStart="@+id/emailLabel" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/name"
+        android:layout_alignLeft="@+id/name"
+        android:layout_alignStart="@+id/name"
+        android:layout_alignRight="@+id/name"
+        android:layout_alignEnd="@+id/name"
+        android:id="@+id/rg">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/female_button"
+            android:text="@string/female"
+            android:layout_alignBaseline="@+id/genLabel"
+            android:layout_alignBottom="@+id/genLabel"
+            android:layout_alignLeft="@+id/name"
+            android:layout_alignStart="@+id/name"
+            android:layout_weight="1" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/male_button"
+            android:text="@string/male"
+            android:layout_alignBaseline="@+id/female_button"
+            android:layout_alignBottom="@+id/female_button"
+            android:layout_toRightOf="@+id/female_button"
+            android:layout_weight="0.20"
+            android:paddingBottom="0dp" />
+    </RadioGroup>
+
+    <TextView
+        android:text="Email Address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/emailLabel"
+        android:layout_alignBaseline="@+id/emailText"
+        android:layout_alignBottom="@+id/emailText"
+        android:layout_toLeftOf="@+id/emailText"
+        android:layout_toStartOf="@+id/emailText" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/emailText"
+        android:layout_below="@+id/genLabel"
+        android:layout_alignLeft="@+id/name"
+        android:layout_alignStart="@+id/name"
+        android:layout_marginTop="36dp" />
+
+    <TextView
+        android:text="Access Code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/accCode1"
+        android:layout_alignBaseline="@+id/editText"
+        android:layout_alignBottom="@+id/editText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:layout_below="@+id/emailText"
+        android:layout_alignLeft="@+id/emailText"
+        android:layout_alignStart="@+id/emailText"
+        android:id="@+id/editText" />
+
+    <TextView
+        android:text="Confirm Code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/accCode2"
+        android:layout_alignBaseline="@+id/editText2"
+        android:layout_alignBottom="@+id/editText2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/editText2"
+        android:layout_below="@+id/editText"
+        android:layout_alignLeft="@+id/editText"
+        android:layout_alignStart="@+id/editText" />
+
+    <TextView
+        android:text="Department"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/depLabel"
+        android:layout_alignBaseline="@+id/spinner"
+        android:layout_alignBottom="@+id/spinner"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner"
+        android:entries="@array/departments"
+        android:layout_marginTop="14dp"
+        android:layout_below="@+id/editText2"
+        android:layout_alignLeft="@+id/name"
+        android:layout_alignStart="@+id/name" />
+
+    <TextView
+        android:text="A/D Access"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/adLabel"
+        android:layout_alignBaseline="@+id/checkBox"
+        android:layout_alignBottom="@+id/checkBox"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <CheckBox
+        android:text="Allowed Access?"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkBox"
+        android:layout_below="@+id/spinner"
+        android:layout_alignLeft="@+id/spinner"
+        android:layout_alignStart="@+id/spinner"
+        android:layout_marginTop="11dp" />
+
+
+
+
+
+
+
+
+
+
+    <Button
+        android:text="RESET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/resetButton"
+        android:layout_below="@+id/checkBox"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:onClick="resetClick" />
+
+    <Button
+        android:text="SUBMIT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/submitButton"
+        android:layout_alignBaseline="@+id/resetButton"
+        android:layout_alignBottom="@+id/resetButton"
+        android:layout_toRightOf="@+id/checkBox"
+        android:layout_toEndOf="@+id/checkBox"
+        android:onClick="submitClick" />
+
+
+
+
+</TableLayout>
+</ScrollView>

@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Homework 2</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string-array name="departments">
+        <item>Arts</item>
+        <item>Business</item>
+        <item>Computer Science</item>
+        <item>Engineering</item>
+        <item>English</item>
+        <item>Finance</item>
+        <item>Law</item>
+        <item>Mathematics</item>
+        <item>Physics</item>
+    </string-array>
+    <string-array name="empids">
+        <item>JD123456</item>
+        <item>JD987654</item>
+        <item>JD654321</item>
+        <item>JD456789</item>
+        <item>JD987321</item>
+    </string-array>
+</resources>
